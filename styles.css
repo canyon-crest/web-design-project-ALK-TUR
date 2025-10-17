@@ -87,3 +87,37 @@ img{
 li{
     font-style: italic;
 }
+
+@media (max-width: 1200px){
+  #container{ 
+    width: 88%; 
+    }
+}
+
+@media (max-width: 992px){
+  #container{ 
+    padding: 28px; 
+    }
+  .float-left, .float-right{
+    float: none;
+    display: block;
+    margin: 0 auto 16px auto;
+  }
+    h1{ 
+    width: 75%; 
+    }
+}
+
+@media (max-width: 768px){
+  #container{ width: 94%; padding: 20px; }
+    h1{ 
+    width: 100%; 
+    font-size: 1.5rem; 
+    }
+    h2{ 
+    font-size: 1.1rem; 
+    }
+    p{ 
+    line-height: 1.6; 
+    }
+}
