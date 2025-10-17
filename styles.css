@@ -67,15 +67,23 @@ img{
     float: right;
     margin-right: 20px;
 }
-/* tagging
-#Acun_Levent_Kaya{
-
+#sidebar{
+    background-color: rgb(188, 138, 235);
+    width: 200px;
+    line-height: 2.25em;
+    border-radius: 20px;
+    border: 2px solid white;
 }
-*/
-
+#sidebar:hover{
+    background-color:rgb(174, 87, 255)
+}
 .highlight{
     background-color: bisque;
 }
 .highlight:hover{
     background-color: rgb(255, 255, 120);
+}
+
+li{
+    font-style: italic;
 }
