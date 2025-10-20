@@ -208,41 +208,55 @@ footer{
     color: var(--muted);
 }
 
+/* Responsive breakpoints */
 @media (max-width: 1200px){
-  #container{ 
-    width: 88%; 
-    }
+    /* slightly narrower container on large laptops */
+    #container{ width: 90%; }
+    .layout{ grid-template-columns: 1fr 240px; }
 }
 
 @media (max-width: 992px){
-  #container{ 
-    padding: 28px; 
-    }
-  .float-left, .float-right{
-    float: none;
-    display: block;
-    margin: 0 auto 16px auto;
-  }
-    h1{ 
-    width: 75%; 
-    }
+    /* tablet and small laptop */
+    #container{ width: 92%; padding: 24px; }
+
+    /* stack main + sidebar vertically */
+    .layout{ grid-template-columns: 1fr; }
+    .float-left, .float-right{ float: none; display: block; margin: 0 auto 16px; max-width: 100%; }
+
+    /* sidebar becomes full width under content */
+    #sidebar{ position: static; width: 100%; margin-top: 12px; }
+
+    /* header tweaks for smaller widths */
+    .site-header{ justify-content: space-between; }
+    .site-header h1{ font-size: 1.05rem; }
+    .site-header .avatar{ width: 48px; height: 48px; }
+
+    h1{ width: 100%; }
 }
 
 @media (max-width: 768px){
-  #container{ 
-    width: 94%; 
-    padding: 20px; 
-    }
-    h1{ 
-    width: 100%; 
-    font-size: 1.5rem; 
-    }
-    h2{ 
-    font-size: 1.1rem; 
-    }
-    p{ 
-    line-height: 1.6; 
-    }
+    /* phones in landscape and smaller tablets */
+    #container{ width: 96%; padding: 18px; }
+    h1{ font-size: 1.4rem; }
+    h2{ font-size: 1rem; }
+    p{ font-size: 0.98rem; line-height: 1.5; }
+    .site-header{ gap: 10px; }
+    .site-header .avatar{ width: 44px; height: 44px; }
+}
+
+@media (max-width: 576px){
+    /* small phones */
+    #container{ width: 96%; padding: 12px; }
+    .site-header{ gap: 8px; }
+    .site-header h1{ font-size: 1rem; }
+    .site-header .avatar{ width: 40px; height: 40px; }
+
+    /* ensure images scale to screen */
+    img{ max-width: 100%; height: auto; }
+    .float-left, .float-right{ max-width: 100%; margin: 0 auto 12px; }
+
+    /* keep sidebar simple on tiny screens */
+    #sidebar{ padding: 12px; }
 }
 
 .info{
