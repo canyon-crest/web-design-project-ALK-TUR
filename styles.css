@@ -20,7 +20,7 @@ html, body { height: 100%; margin: 0; }
 
 
 body{
-    background-color: var(--bg);
+    background-color: var(--bg-1);
     color: var(--muted);
     font-family:'Times New Roman', Times, sans-serif;
     line-height: 1.6;
@@ -32,7 +32,7 @@ body{
     width: 86%;
     max-width: var(--container-max);
     margin: 36px auto;
-    background-color: var(--card-bg);
+    background-color: var(--card);
     padding: var(--gutter);
     border-radius: var(--radius);
     box-shadow: var(--shadoow);
@@ -41,7 +41,7 @@ body{
 }
 
 h1{
-    border: 3px solid var(--accent);
+    border: 3px solid var(--accent-start);
     border-radius: var(--radius);
     padding: 20px 0px;
     text-align: center;
@@ -76,7 +76,7 @@ a:link{
     outline: none;
 }
 a:visited{
-    color: var(--muted);
+    color: rgb(71, 5, 71);
 }
 a:hover, a:focus{
     color: red;
@@ -165,4 +165,14 @@ li{
     p{ 
     line-height: 1.6; 
     }
+}
+
+.info{
+  margin-bottom: 40px;
+}
+
+.info::after{
+  content: "";
+  display: block;
+  clear: both;
 }
